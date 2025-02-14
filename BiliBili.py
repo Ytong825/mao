@@ -1,3 +1,35 @@
+'''
+{
+需要在目录在创建config.josn文件
+  "BILIBILI": [
+    {
+      // B站登录Cookie，必填！格式为分号分隔的键值对，需包含以下关键字段：
+      // - SESSDATA: 登录会话凭证
+      // - bili_jct: CSRF令牌（用于投币、分享等敏感操作）
+      // - DedeUserID: 用户ID
+      // - DedeUserID__ckMd5: 用户ID的MD5校验值
+      // 抓取方法：浏览器登录B站后，通过开发者工具复制Cookie
+      "cookie": "SESSDATA=xxxxx; bili_jct=xxxxx; DedeUserID=xxxxx; DedeUserID__ckMd5=xxxxx; sid=xxxxx",
+
+      // 每日投币数量，默认为0，可选范围：0-5（B站限制每天最多投5个币）
+      // 脚本会自动扣除已通过其他方式投币的数量
+      "coin_num": 0,
+
+      // 投币类型，默认为1，可选值：
+      // - 1: 优先给关注的UP主视频投币
+      // - 0: 给随机视频投币
+      "coin_type": 1,
+
+      // 是否将银瓜子兑换为硬币，默认为false
+      // - true: 自动兑换
+      // - false: 不兑换
+      "silver2coin": false
+    }
+  ]
+}
+'''
+
+
 import json
 import os
 import time
