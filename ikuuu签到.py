@@ -55,9 +55,9 @@ class ikuuu():
 
     def sign(self):
         time.sleep(0.5)
-        url = "https://ikuuu.me/user/checkin"
-        url1 = 'https://ikuuu.me/user'
-        login_url = 'https://ikuuu.me/auth/login'
+        url = "https://ikuuu.one/user/checkin"
+        url1 = 'https://ikuuu.one/user'
+        login_url = 'https://ikuuu.one/auth/login'
 
         login_header = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
